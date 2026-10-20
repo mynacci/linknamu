@@ -8,7 +8,7 @@ export default async function ClickCount({ linkId }: { linkId: string }) {
   const count = counts[linkId] ?? 0;
 
   return (
-    <span className="shrink-0 text-xs text-zinc-500 tabular-nums" aria-label={`클릭 ${count}회`}>
+    <span className="shrink-0 text-xs text-stone-400 tabular-nums" aria-label={`클릭 ${count}회`}>
       {count.toLocaleString()}
     </span>
   );

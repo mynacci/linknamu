@@ -29,7 +29,7 @@ export default function LinkCard({ link, clickCount }: Props) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => recordClick(link.id)}
-      className="flex min-h-14 w-full items-center justify-between gap-3 rounded-2xl border border-zinc-200 bg-white px-5 py-4 font-medium shadow-sm transition hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 dark:border-zinc-700 dark:bg-zinc-900"
+      className="flex min-h-14 w-full items-center justify-between gap-3 rounded-2xl border border-white/70 bg-white/70 px-6 py-4 font-medium shadow-[0_2px_12px_-4px_rgba(120,70,30,0.15)] backdrop-blur-sm transition duration-200 hover:-translate-y-px hover:bg-white hover:shadow-[0_6px_20px_-6px_rgba(120,70,30,0.25)] active:translate-y-0 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
     >
       <span className="flex-1 text-center">{link.title}</span>
       {clickCount}
