@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import type { LinkItem } from "@/data/profile";
 import ClickCount from "@/components/ClickCount";
+import ClickCountView from "@/components/ClickCountView";
 import LinkCard from "@/components/LinkCard";
 
 export default function LinkList({ links }: { links: LinkItem[] }) {
@@ -11,7 +12,7 @@ export default function LinkList({ links }: { links: LinkItem[] }) {
           <LinkCard
             link={link}
             clickCount={
-              <Suspense fallback={null}>
+              <Suspense fallback={<ClickCountView count={0} />}>
                 <ClickCount linkId={link.id} />
               </Suspense>
             }
